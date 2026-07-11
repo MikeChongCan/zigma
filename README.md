@@ -134,6 +134,9 @@ and updates the `AUTH_DB` binding; subsequent deploys should only apply pending
 migrations. Generate the production Better Auth secret with
 `openssl rand -base64 32`.
 
+`BETTER_AUTH_SECRET` is declared as required in `wrangler.jsonc`, so Wrangler
+blocks future deploys that would otherwise ship authentication without it.
+
 In Google Cloud Console, register these authorized redirect URIs:
 
 ```text
