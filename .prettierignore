@@ -1,0 +1,11 @@
+.agents/
+.claude/
+.playwright-cli/
+.wrangler/
+dist/
+node_modules/
+output/playwright/
+bun.lock
+skills-lock.json
+src/routeTree.gen.ts
+worker-configuration.d.ts

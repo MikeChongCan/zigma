@@ -1,0 +1,575 @@
+{
+  "version": 1,
+  "skills": {
+    "agency-grid-layout-minimal": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/agency-grid-layout-minimal/SKILL.md",
+      "computedHash": "3eb5df895aa5117750b2ac287f27665c398416a02cf24f7276719c100ac47d39"
+    },
+    "animation-on-scroll": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/animation-on-scroll/SKILL.md",
+      "computedHash": "2063af5d4b22095d70125d6494fc8343ab63df1bfcfb430f87af2b34e419f6d1"
+    },
+    "animation-systems": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/animation-systems/SKILL.md",
+      "computedHash": "606f7202aaa7a990fb919e6d287208798ef2906d2a87fe50653c82b450bc08de"
+    },
+    "atmosphere-background": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/atmosphere-background/SKILL.md",
+      "computedHash": "1e431ff7cca2a88f58aa728d43fa271747910c07d76f9097bb8c114afc550357"
+    },
+    "audit-verify-explain-grade-5": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/audit-verify-explain-grade-5/SKILL.md",
+      "computedHash": "a210c5fccb84997a3579dd91dfb07935619b98a770e23db28ff1f74e17e590fd"
+    },
+    "aura-asset-images": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/media/aura-asset-images/SKILL.md",
+      "computedHash": "0f254992b093e332bd0575b3a869179d8ad2210f0c6f8b5436fe29bb7e5df5f8"
+    },
+    "background-grid-webgl": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/background-grid-webgl/SKILL.md",
+      "computedHash": "65bef6470fe06012ce925128bae885f51fc8dff5d4b814a4cf0a022d0a5198c4"
+    },
+    "beautiful-shadows": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/beautiful-shadows/SKILL.md",
+      "computedHash": "7f2285d3971b6312990df4ffe4b149d730a9a787b8941d2ae89ebda663375157"
+    },
+    "blue-cloudy-clean-modern": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/blue-cloudy-clean-modern/SKILL.md",
+      "computedHash": "b0696bb09b0185cb992d2ad27d534d12dad543459bf961b1e3afb6e408acb376"
+    },
+    "blue-laser-clean-glass-layout": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/blue-laser-clean-glass-layout/SKILL.md",
+      "computedHash": "7a217666c5cde4c66d2e3d85bd9c6c16dc52d7cbfaeb2d0d9aac176533ea9b69"
+    },
+    "book-serif-index": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/book-serif-index/SKILL.md",
+      "computedHash": "70f18fe36ea2af0adc65c570c2abcdb840f4339687b00704380ff7f69ffff11a"
+    },
+    "bright-green-tech-system-webgl": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/bright-green-tech-system-webgl/SKILL.md",
+      "computedHash": "88ae1ca90d081df84bd76320090c0af4bb6744d30a4b8e587eb3f5f4d4c3ecb7"
+    },
+    "cinematic-gsap-lenis-motion-system": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/cinematic-gsap-lenis-motion-system/SKILL.md",
+      "computedHash": "f8908ca80ea5151895154f089696636e0cb28a58e7155454d70d3908998d939e"
+    },
+    "cinematic-scroll-storytelling": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/cinematic-scroll-storytelling/SKILL.md",
+      "computedHash": "917178f8a3875986ca00d54c10b8809f4a8ac5e4846a20663fcc50ea42af5175"
+    },
+    "clean-minimal-beige-light-mode": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/clean-minimal-beige-light-mode/SKILL.md",
+      "computedHash": "64b1a8f1225e1dac250e10e97adaa803f0993cad66ce89ef5ac4d0e8be90d243"
+    },
+    "cobejs": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/cobejs/SKILL.md",
+      "computedHash": "9ff564a0c04f3902132ffbc7b2d26877e01519d6d4ff8f7b8fdc3d78ca9931e0"
+    },
+    "company-logos": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/company-logos/SKILL.md",
+      "computedHash": "58329ba3fad3609ec5962d3f3b409c9fcb63a85eb8a436f871d1bbc490323b92"
+    },
+    "container-lines": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/container-lines/SKILL.md",
+      "computedHash": "a453de95e08668fd15b2a181c1c8f668aa153d763cf912b0e6e2977a51410191"
+    },
+    "copywriting": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/copywriting/SKILL.md",
+      "computedHash": "ca94df07339007b9f497c7a9b434691b82e1b8c8461181d27d2d3df80da518f5"
+    },
+    "corner-diagonals": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/corner-diagonals/SKILL.md",
+      "computedHash": "afdb959eb40d3eb713809c5a2d5cb83aa2d05c49736a6931de99b820d9cb013e"
+    },
+    "corner-lasers": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/corner-lasers/SKILL.md",
+      "computedHash": "e02587843ab18c7b4d8d0a58fbe8a383030457ab84ffc75373b3f9a19b4f34b5"
+    },
+    "css-alpha-masking": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/css-alpha-masking/SKILL.md",
+      "computedHash": "356bb831b2623c1659d96665a8c9724801e26f39a4474cec611408c46771dc2e"
+    },
+    "css-border-gradient": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/css-border-gradient/SKILL.md",
+      "computedHash": "7554ff6341ddb70dace362be8dc6196c624b87ab8fb6679c3cbccb5c22284c47"
+    },
+    "customer-email-draft-threads": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/customer-email-draft-threads/SKILL.md",
+      "computedHash": "76188c0cf7c82f7a8c734c7dbadc03994600f2242c58dab5529b9ac26aea2927"
+    },
+    "customer-support-verification": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/customer-support-verification/SKILL.md",
+      "computedHash": "217341d199a9342d819ca77fba498315318f05482c3ebf833eb2204a0b9f0853"
+    },
+    "daily-ui-inspiration-capture": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/daily-ui-inspiration-capture/SKILL.md",
+      "computedHash": "5c4100fa5b457bec1654de641aafcefb1a2873e6341ac44200090a8d2f7dd810"
+    },
+    "dark-blue-contrasting-clean": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/dark-blue-contrasting-clean/SKILL.md",
+      "computedHash": "4c35b82c707ceea5b68f7ab98e10816a315ae94400c6d0a1973809c27441b8a9"
+    },
+    "dark-glass-clean-layout": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/dark-glass-clean-layout/SKILL.md",
+      "computedHash": "085fba66ef3c0753a88296bf454270add94eda1416b6e604e9a5126765096788"
+    },
+    "design-first-ui-prompting": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/design-first-ui-prompting/SKILL.md",
+      "computedHash": "41c225ffcce952c1190da2eba23444221e17cab48bbd9dcdd6ecbd01debf25c9"
+    },
+    "design-taste-frontend": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/design-taste-frontend/SKILL.md",
+      "computedHash": "5119fbff602258036b22978d1a51fb0f8be0197a4ba4f6f61233b98350cc158d"
+    },
+    "dither-background": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/dither-background/SKILL.md",
+      "computedHash": "b9c403245b0bac084f5f6f166eeb6b828a22c8c06cf3d145dd177e099c59969d"
+    },
+    "dither-laser-dark-mode": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/dither-laser-dark-mode/SKILL.md",
+      "computedHash": "94150d78fd34c03c9e87c6a97a421b3b51c0374457c496fd255e515f6473aa51"
+    },
+    "editorial-tech": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/editorial-tech/SKILL.md",
+      "computedHash": "b51ef95341738233c539b51f4e7f878d0b6822a5b3257ec0c0f8d1c74252affb"
+    },
+    "elevenlabs-tts": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/elevenlabs-tts/SKILL.md",
+      "computedHash": "9c2c83ffb314307b4b6d0c5216a178775a24faa5f38826eb18a12924a4008cd1"
+    },
+    "framed-grid-layout": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/framed-grid-layout/SKILL.md",
+      "computedHash": "e575d25457aa56821f4312e7a7ede88528159d1d775b364b8446c161ffaac077"
+    },
+    "framed-tech-dark-border-gradient": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/framed-tech-dark-border-gradient/SKILL.md",
+      "computedHash": "4d565310961f576b560f2a9ff09b09b56fdef5cfd18a0ee515504fa594c5f2f9"
+    },
+    "frontend-design": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/frontend-design/SKILL.md",
+      "computedHash": "65926da4a2b7af2a828b810f2b07a484f31668d100f61381aa05f90d8d462ba5"
+    },
+    "full-output-enforcement": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/full-output-enforcement/SKILL.md",
+      "computedHash": "26bd29ce4c5e02c7666b2d503609bf466bd32290822e91f0e984147048dbb924"
+    },
+    "funky-purple-container-tech": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/funky-purple-container-tech/SKILL.md",
+      "computedHash": "14c7e9b084515559038638e4fce8fbce3b185c0ce88f305f8fc9ca3fd6df7710"
+    },
+    "glass-dark-mode-clock": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/glass-dark-mode-clock/SKILL.md",
+      "computedHash": "f117d7a57f00d116d960352645fd82d627689b56be0b15d9759ff96221ebdd97"
+    },
+    "glass-dark-ui": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/glass-dark-ui/SKILL.md",
+      "computedHash": "74b46b2f93ad368b8f591f8fdcb4cd9d8ad9c7865eacd56cbf750f48fc2032ee"
+    },
+    "globe-gl": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/globe-gl/SKILL.md",
+      "computedHash": "dd629c80bd54dd82bdd8bca57810d95906c4b64765affd134e424f71ac8bd124"
+    },
+    "globe-particles": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/globe-particles/SKILL.md",
+      "computedHash": "8715c8906abf78e938fb38eba96660f2b325cbb38e7d1480a177554a20f7e9b4"
+    },
+    "gooey-blob-system": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/gooey-blob-system/SKILL.md",
+      "computedHash": "f9fc3409117e41f5e371eafd8d6ec5b3a93887e1001da01b971a0c80ae68b1b2"
+    },
+    "gpt-taste": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/gpt-taste/SKILL.md",
+      "computedHash": "9df107af2f6879d41a8f6084600ef8e88948773baf23e8ed07fedba977e851b5"
+    },
+    "gsap": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/gsap/SKILL.md",
+      "computedHash": "a6c2ae8cb3d1c6588680122cffda48323222a0cf3362394a746353382ffc1da3"
+    },
+    "gsap-scrolltrigger-storytelling": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/gsap-scrolltrigger-storytelling/SKILL.md",
+      "computedHash": "0fd5d0658991b2383493b3d3467bfc392d8c53ca9b532159145774fca94e5d27"
+    },
+    "high-contrast-skeuomorphic-clean": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/high-contrast-skeuomorphic-clean/SKILL.md",
+      "computedHash": "e198f968fa50a555bfb7942de0a376efef78ada69d6745837878c9bb1c254ee4"
+    },
+    "high-end-visual-design": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/high-end-visual-design/SKILL.md",
+      "computedHash": "b9ab60bb3fa5ca9770a1c28e7d42cfd1f5f4dc98f548485ff0b4db94f56a9e16"
+    },
+    "html-to-interaction-prompts": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/html-to-interaction-prompts/SKILL.md",
+      "computedHash": "f0215d638de3900149648e80096d3968adefd3b0deaf10ec8a4fd9d7fc04521a"
+    },
+    "image-first-grid-layout": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/image-first-grid-layout/SKILL.md",
+      "computedHash": "905119629e98e62f80b1d5d0a716e407399cf6c5df6bea3b414c5a1dc8e1956c"
+    },
+    "image-to-code": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/image-to-code/SKILL.md",
+      "computedHash": "4a98099dad11716544d67069d41bbd052b5dd22f286e5abd7c73a45d3ff88b6e"
+    },
+    "industrial-brutalist-ui": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/industrial-brutalist-ui/SKILL.md",
+      "computedHash": "8fc355c4aadb7d29c53ca28bc41be3cd6eea765d121e3737c4dc2d0f90a8effa"
+    },
+    "landing-page": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/landing-page/SKILL.md",
+      "computedHash": "82dd2c96ff6db602c2d22f2d5397ba1b83d43d3ea3511021ae179ccade0730c6"
+    },
+    "light-mode-paper-technical": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/light-mode-paper-technical/SKILL.md",
+      "computedHash": "864e68ea6cd0b4f3522739a47d1dcc3826749c9dd53915f81cab649818249f9b"
+    },
+    "marquee-loop": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/marquee-loop/SKILL.md",
+      "computedHash": "73707f1764601414d536126d96b74ede14ff0e26cdea427576ccf4741cec9ab6"
+    },
+    "masked-reveal": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/masked-reveal/SKILL.md",
+      "computedHash": "bf51b53058c5163ff8125acd5e999e3d6112f29bf3f608d7139701339214eac6"
+    },
+    "matterjs": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/matterjs/SKILL.md",
+      "computedHash": "8ad80d2b70c8f020e8d03bae030834796ab06715527121d7bd259f355063187a"
+    },
+    "mesh-gradient-dark-blue-clean": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/mesh-gradient-dark-blue-clean/SKILL.md",
+      "computedHash": "2caf19b041c19e9fde152217b75452e99ed5653c0b7063e56806b427bbda9d1a"
+    },
+    "minimalist-ui": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/minimalist-ui/SKILL.md",
+      "computedHash": "fc2bbd0c37e6044e9944cfb5019eebc7f49b4065b4f2001b18b36c4814225779"
+    },
+    "nested-container-clean-agency": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/nested-container-clean-agency/SKILL.md",
+      "computedHash": "d41de9750b9152b525cef6a6aff5838891de872d4d7a950af32a86d0b0cdd5d1"
+    },
+    "nested-container-frames": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/nested-container-frames/SKILL.md",
+      "computedHash": "913fa03af4fea67fbd8326f5e6f694487df5c5e474187b1ec76223a5328579d2"
+    },
+    "netlify-deploy": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/netlify-deploy/SKILL.md",
+      "computedHash": "073d6f50c7a20628a84764eb446ea03d1faf00e618fe593a4c5fa9627b1b2cd4"
+    },
+    "number-details": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/number-details/SKILL.md",
+      "computedHash": "3a8d97b8b5814dc87d0274adffb4499d08e4774e1f019c240ac7434f33940b1c"
+    },
+    "optimize-web-animations": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/optimize-web-animations/SKILL.md",
+      "computedHash": "1ad20d774f3acb6b38dc162f2e7fcaaa8efdf5331081877d356c6f1da1bb3b5b"
+    },
+    "orange-clean-paper-saas": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/orange-clean-paper-saas/SKILL.md",
+      "computedHash": "ad93970cfca05d462b2b2ff08155d5664d0b06509752919d4c4a9dc23546d63c"
+    },
+    "pdf": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/pdf/SKILL.md",
+      "computedHash": "1baa3a66a08aa3224921a436308beacc7154901a36a03e91315cb78ac4c9e526"
+    },
+    "performance-profiling": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/performance-profiling/SKILL.md",
+      "computedHash": "973c49a70c8d2f23f022b22bf64636f6da2931e85e86019540c1aa3b9324f7c4"
+    },
+    "playwright": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/playwright/SKILL.md",
+      "computedHash": "ede340f563f8714d05c2d9d6c15df2ff09d0c0653f67c1db5d155a5499118230"
+    },
+    "playwright-interactive": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/playwright-interactive/SKILL.md",
+      "computedHash": "cb5e0874a9e45a412e8977013df6d6b5352396f2aa96de020aa8ed6b22137341"
+    },
+    "pricing-page": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/pricing-page/SKILL.md",
+      "computedHash": "2fb3a8c078485028ccbf3066476f90c5a4764fda52c2500ab91ff2b78926f58d"
+    },
+    "progressive-blur": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/progressive-blur/SKILL.md",
+      "computedHash": "88b7a541650df42c41dbabdb9d90ba57df1ea056a79318e3f04cfff38d587d35"
+    },
+    "redesign-existing-projects": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/redesign-existing-projects/SKILL.md",
+      "computedHash": "bd2956a5be8d6e59bcf9893aa041d02c5b6c99dab314b3baa09b4e87e829e2c1"
+    },
+    "screenshot": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/screenshot/SKILL.md",
+      "computedHash": "491e9451dadcdb51950f03ca091ba753cbbb41613a619d26b6f65ad3ab79b5cc"
+    },
+    "seo-audit": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/seo-audit/SKILL.md",
+      "computedHash": "8a35e485cab2dffc0dae1355713a36125aabb0cb4c1401676c6bf5f9df88ac68"
+    },
+    "skeuomorphic-ui": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/skeuomorphic-ui/SKILL.md",
+      "computedHash": "6479a0679d13f374318c8b2853b7c78e1ba71e42f8d8ec197af594c9e3a2e476"
+    },
+    "solar-duotone-bold": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/solar-duotone-bold/SKILL.md",
+      "computedHash": "1cfaadf08b18dd68322c1d1550bd3347c85b11f90020a2110f2b557299a340ae"
+    },
+    "split-layout-technical": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/split-layout-technical/SKILL.md",
+      "computedHash": "e7f4fa8c93987430a2fbfae75762b715e563c6e5e781194c01e46900f9721e6d"
+    },
+    "staggered-word-reveal": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/staggered-word-reveal/SKILL.md",
+      "computedHash": "dc3d2cdd67457cd8158c4e8ab598d541a15d55fb05c0ff6c5b4cc22c6d6325be"
+    },
+    "stitch-design-taste": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/stitch-design-taste/SKILL.md",
+      "computedHash": "3aa58992f0fd9673b975cd48cd4f8ae4b4976fd5cdd9f20e26d3d447aee317fb"
+    },
+    "stitched-full-page-capture": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/stitched-full-page-capture/SKILL.md",
+      "computedHash": "dde0a823dac144cca444934363cd58c1b0537ab2201df6c2d52ff4e2dc821a50"
+    },
+    "swiftui-debugging": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/swiftui-debugging/SKILL.md",
+      "computedHash": "a3602d4bb8e744833b7e9a7787eb3f6c1048bd2116a196f1437881b4a5c840a1"
+    },
+    "swiftui-pro": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/ui/swiftui-pro/SKILL.md",
+      "computedHash": "1a7bd0e59004eaf646159f2dedf5611e35e18b325142543fd06b5a6a47299250"
+    },
+    "tailwindcss": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/tailwindcss/SKILL.md",
+      "computedHash": "2989da5952cab6a0a3e6dd5e82be4dd13f89bffb98e1d556c967c87e8a911e5d"
+    },
+    "tech-green-dark-mode-modern": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/tech-green-dark-mode-modern/SKILL.md",
+      "computedHash": "6fe761cda58a8a75186a838dd413b07f41194430b61cc6fdbe8bb85665fff2c3"
+    },
+    "technical-wireframe-info-layout": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/technical-wireframe-info-layout/SKILL.md",
+      "computedHash": "b22d4921fe142bfbc677930ef396f37793542782ed7a93aa0d6f4daf23732a1f"
+    },
+    "threejs": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/threejs/SKILL.md",
+      "computedHash": "eeae1ca1768670eba2804730ba7bd13b0c4591d9188ef0172c527b847b3b6e00"
+    },
+    "unicorn-studio": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/unicorn-studio/SKILL.md",
+      "computedHash": "94f1f5e849ca5618e01de50fa800625596f2a84acae93d6fd8c2ace5642c5b3b"
+    },
+    "unsplash-asset-images": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/media/unsplash-asset-images/SKILL.md",
+      "computedHash": "714dc722a17701c229c2dfea4c7b8725578d3e3ff9b436131f2855e082b62ca5"
+    },
+    "vantajs": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/vantajs/SKILL.md",
+      "computedHash": "9a63c0266a2de86a8cf10d786656f2c2070b420bb2513bcfb2001e5556ab203d"
+    },
+    "video-to-superprompt": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/video-to-superprompt/SKILL.md",
+      "computedHash": "4e4c25c0d9bd1afcd07b64b9821113718179bebf6c0df5bd62cfea6968ae4a17"
+    },
+    "webgl-3d-object": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/webgl-3d-object/SKILL.md",
+      "computedHash": "c33478c9ce46b84f2917d834b2c1f1f09403cdc58cc10690d6c192e8d887d052"
+    },
+    "webgl-landing-steering": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/webgl-landing-steering/SKILL.md",
+      "computedHash": "eb6e5e6aedb196999d7c2da5cf92b232ea3209bdc50d565a188caa94554bddf8"
+    },
+    "webgl-laser": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/webgl-laser/SKILL.md",
+      "computedHash": "34ec01ad2710a2fa68684f42c6573944f42a06bb426e53cc777f5895ec255228"
+    },
+    "x-bookmark-quote-posts": {
+      "source": "MengTo/Skills",
+      "sourceType": "github",
+      "skillPath": "agent-skills/codex/x-bookmark-quote-posts/SKILL.md",
+      "computedHash": "44a25444af01e123de994201507203fb5b163f432b4e5836109d80b93461e6ac"
+    }
+  }
+}
