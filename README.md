@@ -1,6 +1,54 @@
-# Offset
+# Zigma
 
-Offset is an infinite canvas for designing live HTML and React interfaces. It combines a DOM-first renderer, nested layers, a property inspector, undo/redo, and Yjs-based multiplayer rooms persisted by Cloudflare Durable Objects.
+Zigma is an infinite canvas for designing live HTML and React interfaces. It combines a DOM-first renderer, nested layers, a property inspector, undo/redo, and Yjs-based multiplayer rooms persisted by Cloudflare Durable Objects.
+
+## Architecture
+
+```mermaid
+flowchart TD
+    subgraph Browser ["Browser Client (SPA)"]
+        Canvas["React DOM Canvas<br/>(Renderer)"]
+        Store["Zustand Store<br/>(Local state & history)"]
+        CRDT["Yjs CRDT Client<br/>(Doc edits)"]
+        Aware["Awareness State<br/>(Live Cursors)"]
+
+        Store <--> Canvas
+        CRDT <--> Store
+        Aware <--> Canvas
+    end
+
+    subgraph Edge ["Cloudflare Worker (Edge Gateway)"]
+        Router["TanStack Start Router<br/>(HTTP & SSR Server)"]
+        Auth["Better Auth Handler<br/>(Identity Gate)"]
+        OG["OG Image Engine<br/>(cf-workers-og card gen)"]
+    end
+
+    subgraph Persistence ["Edge Persistence & Storage"]
+        DO["CanvasRoom Durable Object<br/>(Durable Room Sync)"]
+        D1[("D1 SQLite Database<br/>(Auth Users & Sessions)")]
+        DOStorage["DO Storage<br/>(Binary snapshot buffers)"]
+    end
+
+    %% Client and Edge connections
+    Canvas <-->|HTTP / SSR Page| Router
+    CRDT <-->|WS Yjs updates| Router
+    Aware <-->|WS Cursors| Router
+
+    %% Edge and storage connections
+    Router <-->|Room WebSocket proxy| DO
+    Auth <-->|Drizzle SQL queries| D1
+    DO <-->|Hibernated load / save| DOStorage
+
+    classDef client fill:#111512,stroke:#A9D36E,stroke-width:2px,color:#ECEFEA;
+    classDef edge fill:#151211,stroke:#F0643F,stroke-width:2px,color:#ECEFEA;
+    classDef storage fill:#111315,stroke:#2B3135,stroke-width:2px,color:#ECEFEA;
+
+    class Canvas,Store,CRDT,Aware client;
+    class Router,Auth,OG edge;
+    class DO,D1,DOStorage storage;
+```
+
+_(A styled vector version of this diagram is also available at [public/architecture.svg](public/architecture.svg).)_
 
 ## What is included
 
@@ -69,18 +117,20 @@ Authenticate once, then deploy:
 
 ```bash
 bunx wrangler login
-bun run db:create
 bun run cf-typegen
+bun run db:migrate:remote
 bunx wrangler secret put BETTER_AUTH_SECRET
 bunx wrangler secret put GOOGLE_CLIENT_ID
 bunx wrangler secret put GOOGLE_CLIENT_SECRET
-bun run db:migrate:remote
 bun run deploy
 ```
 
-`db:create` creates `canvas-pro-auth` in the selected Cloudflare account and
-updates the `AUTH_DB` binding with its database ID. Generate the production
-secret with `openssl rand -base64 32`.
+Production is pinned to Cloudflare account
+`493236c60f135c72e3753239bbcf8839`. The existing `canvas-pro-auth` D1 database
+is bound as `AUTH_DB`, so normal deploys should apply pending migrations rather
+than create another database. Use `bun run db:create` only when deliberately
+replacing that binding. Generate the production Better Auth secret with
+`openssl rand -base64 32`.
 
 In Google Cloud Console, register these authorized redirect URIs:
 
@@ -96,6 +146,7 @@ code.
 `wrangler.jsonc` includes:
 
 - the custom TanStack Start Worker entrypoint at `src/server.ts`
+- the production Cloudflare account and `zigma-canvas-pro` Worker name
 - a `CanvasRoom` Durable Object binding
 - an `AUTH_DB` Cloudflare D1 binding
 - a SQLite-backed Durable Object migration
