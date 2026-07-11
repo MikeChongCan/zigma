@@ -5,6 +5,7 @@ import {
   ChevronDown,
   Cloud,
   CloudOff,
+  Download,
   PanelLeftClose,
   PanelRightClose,
   Redo2,
@@ -16,6 +17,8 @@ import { AuthAccountMenu } from '#/components/auth/auth-account-menu'
 import type { AuthCapabilities } from '#/components/auth/studio-auth-gate'
 import { useEditorStore } from '#/editor/store'
 import type { Collaborator, PresenceUser } from '#/editor/types'
+
+import { ExportDialog } from './export-dialog'
 
 interface EditorHeaderProps {
   collaborators: Collaborator[]
@@ -29,6 +32,7 @@ export function EditorHeader({
   capabilities,
 }: EditorHeaderProps) {
   const [copied, setCopied] = useState(false)
+  const [exportOpen, setExportOpen] = useState(false)
   const title = useEditorStore((state) => state.title)
   const setTitle = useEditorStore((state) => state.setTitle)
   const status = useEditorStore((state) => state.connectionStatus)
@@ -151,6 +155,14 @@ export function EditorHeader({
             </span>
           )}
         </div>
+        <button
+          type="button"
+          className="export-button"
+          onClick={() => setExportOpen(true)}
+        >
+          <Download size={14} />
+          Export
+        </button>
         <button type="button" className="share-button" onClick={share}>
           {copied ? <Check size={14} /> : <Share2 size={14} />}
           {copied ? 'Link copied' : 'Share'}
@@ -165,6 +177,7 @@ export function EditorHeader({
           <PanelRightClose size={15} />
         </button>
       </div>
+      <ExportDialog open={exportOpen} onClose={() => setExportOpen(false)} />
     </header>
   )
 }

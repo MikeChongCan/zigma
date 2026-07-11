@@ -55,6 +55,7 @@ export function CanvasNodeView({
   return (
     <div
       className="canvas-node"
+      data-node-id={node.id}
       data-kind={node.kind}
       data-selected={selected}
       data-locked={node.locked}

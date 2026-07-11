@@ -11,6 +11,7 @@ Offset is an infinite canvas for designing live HTML and React interfaces. It co
 - Layers, visibility, locking, ordering, multi-select, duplicate, and delete
 - Selection-aware right-click menus with bulk hierarchy and layer actions
 - Transform, appearance, content, and typography inspection
+- Selected-frame and multi-frame export to PNG, JPEG, SVG, ZIP, and PDF
 - Gesture-aware undo/redo history
 - Yjs collaborative document synchronization
 - Live cursors and selections through Yjs awareness
@@ -112,6 +113,15 @@ Social previews are rendered as 1200×630 PNGs at `/api/og`. The landing page
 and studio routes emit absolute Open Graph, Twitter card, and canonical metadata
 using the current request origin, so previews work on local, preview, and custom
 Cloudflare domains without a hard-coded production URL.
+
+## Canvas export
+
+The editor header exports the selected frame (including when a child layer is
+selected) or every visible top-level frame. PNG, JPEG, and PDF support 1×, 2×,
+or 3× rendering. Multi-frame image and SVG exports are packaged as a ZIP; PDF
+uses one correctly sized page per frame. Exported assets embed the project fonts
+and omit editor-only selection controls, labels, resize handles, and collaborator
+cursors.
 
 ## Collaboration architecture
 

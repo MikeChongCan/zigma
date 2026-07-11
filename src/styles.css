@@ -1839,8 +1839,332 @@ a {
   padding: 0 12px;
 }
 
+.export-button {
+  align-items: center;
+  background: #232628;
+  border: 1px solid #383c3e;
+  border-radius: 4px;
+  color: #d5d7d2;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 9px;
+  font-weight: 680;
+  gap: 7px;
+  height: 30px;
+  padding: 0 11px;
+}
+
+.export-button:hover {
+  background: #303436;
+  border-color: #505557;
+  color: white;
+}
+
 .share-button:hover {
   background: white;
+}
+
+.export-backdrop {
+  align-items: center;
+  background: rgba(8, 10, 10, 0.72);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 24px;
+  position: fixed;
+  user-select: text;
+  z-index: 120;
+}
+
+.export-dialog {
+  background: #efede6;
+  border: 1px solid #aaa89f;
+  box-shadow: 24px 30px 0 rgba(0, 0, 0, 0.26);
+  color: #171916;
+  max-height: calc(100dvh - 48px);
+  max-width: 650px;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+
+.export-dialog::before {
+  background: var(--orange);
+  content: '';
+  height: 5px;
+  left: 28px;
+  position: absolute;
+  top: 0;
+  width: 74px;
+}
+
+.export-dialog-header {
+  align-items: center;
+  border-bottom: 1px solid #c7c4bb;
+  display: flex;
+  justify-content: space-between;
+  padding: 29px 30px 25px;
+}
+
+.export-dialog-header > div > span,
+.export-section-label > span {
+  color: #d84d2b;
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.11em;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+
+.export-dialog-header h2 {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0;
+}
+
+.export-dialog-header > button {
+  align-items: center;
+  background: #dfdcd4;
+  color: #666960;
+  cursor: pointer;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+.export-dialog-header > button:hover:not(:disabled) {
+  background: #171916;
+  color: #f3efe6;
+}
+
+.export-section {
+  border-bottom: 1px solid #c7c4bb;
+  padding: 22px 30px 25px;
+}
+
+.export-section-label {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.export-section-label > span {
+  color: #555850;
+  margin: 0;
+}
+
+.export-section-label small {
+  color: #8a8d84;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  text-transform: uppercase;
+}
+
+.export-scope-control {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.export-scope-control > button {
+  background: #e2dfd7;
+  border: 1px solid transparent;
+  color: #383b36;
+  cursor: pointer;
+  min-height: 65px;
+  overflow: hidden;
+  padding: 13px 14px;
+  text-align: left;
+}
+
+.export-scope-control > button[data-active='true'] {
+  background: #f8f5ed;
+  border-color: #171916;
+  box-shadow: inset 3px 0 var(--orange);
+}
+
+.export-scope-control > button:disabled {
+  cursor: default;
+  opacity: 0.46;
+}
+
+.export-scope-control > button small {
+  color: #7e8178;
+  display: block;
+  font-size: 7px;
+  line-height: 1.45;
+  margin-top: 6px;
+  max-width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.export-format-grid {
+  display: grid;
+  gap: 7px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.export-format-grid > button {
+  align-items: flex-start;
+  background: #e2dfd7;
+  border: 1px solid transparent;
+  color: #676a62;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 104px;
+  padding: 13px;
+  position: relative;
+  text-align: left;
+}
+
+.export-format-grid > button:hover,
+.export-format-grid > button[data-active='true'] {
+  background: #f8f5ed;
+  color: #171916;
+}
+
+.export-format-grid > button[data-active='true'] {
+  border-color: #171916;
+}
+
+.export-format-grid strong {
+  font-size: 10px;
+  margin-top: 13px;
+}
+
+.export-format-grid small {
+  color: #8a8d84;
+  font-family: var(--font-mono);
+  font-size: 6px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.export-format-grid > button > svg:last-child {
+  color: var(--orange-dark);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.export-scale-section {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  padding-top: 18px;
+}
+
+.export-scale-section .export-section-label {
+  display: block;
+  margin: 0;
+}
+
+.export-scale-section .export-section-label small {
+  display: block;
+  margin-top: 5px;
+}
+
+.export-scale-control {
+  background: #ddd9d1;
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  padding: 3px;
+}
+
+.export-scale-control button {
+  background: transparent;
+  color: #74776f;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  height: 30px;
+}
+
+.export-scale-control button[data-active='true'] {
+  background: #f8f5ed;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  color: #171916;
+}
+
+.export-summary {
+  align-items: center;
+  background: #dad7cf;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.export-summary > div {
+  min-width: 0;
+}
+
+.export-summary strong,
+.export-summary span {
+  display: block;
+}
+
+.export-summary strong {
+  font-size: 10px;
+}
+
+.export-summary span {
+  color: #74776f;
+  font-size: 7px;
+  margin-top: 5px;
+}
+
+.export-confirm-button {
+  align-items: center;
+  background: #171916;
+  color: #f3efe6;
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  font-size: 9px;
+  font-weight: 700;
+  gap: 8px;
+  height: 38px;
+  justify-content: center;
+  min-width: 110px;
+  padding: 0 16px;
+}
+
+.export-confirm-button:hover:not(:disabled) {
+  background: var(--orange-dark);
+}
+
+.export-confirm-button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.export-error {
+  background: #f4d9d0;
+  color: #9e331b;
+  font-size: 9px;
+  margin: 0;
+  padding: 11px 30px;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .editor-body {
@@ -3216,6 +3540,33 @@ a {
     font-size: 0;
     padding: 0;
     width: 30px;
+  }
+  .export-button {
+    font-size: 0;
+    padding: 0;
+    width: 30px;
+  }
+  .export-dialog {
+    box-shadow: none;
+    max-height: calc(100dvh - 20px);
+  }
+  .export-backdrop {
+    padding: 10px;
+  }
+  .export-dialog-header,
+  .export-section,
+  .export-summary {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .export-format-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .export-scope-control {
+    grid-template-columns: 1fr;
+  }
+  .export-summary span {
+    display: none;
   }
   .share-button svg {
     margin: 0;
