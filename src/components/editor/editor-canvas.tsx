@@ -359,11 +359,14 @@ export function EditorCanvas({
             <div
               className="remote-cursor"
               key={collaborator.clientId}
-              style={{
-                left: collaborator.cursor.x,
-                top: collaborator.cursor.y,
-                color: collaborator.color,
-              }}
+              style={
+                {
+                  left: collaborator.cursor.x,
+                  top: collaborator.cursor.y,
+                  color: collaborator.color,
+                  '--cursor-scale': 1 / camera.zoom,
+                } as React.CSSProperties
+              }
             >
               <svg
                 width="18"

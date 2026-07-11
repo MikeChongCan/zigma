@@ -59,10 +59,21 @@ export interface Camera {
 
 export interface Collaborator {
   clientId: number
+  userId: string
   name: string
   color: string
+  image?: string | null
+  isAnonymous: boolean
   cursor?: Point
   selection: string[]
+}
+
+export interface PresenceUser {
+  userId: string
+  name: string
+  color: string
+  image?: string | null
+  isAnonymous: boolean
 }
 
 export type ConnectionStatus = 'offline' | 'connecting' | 'synced'

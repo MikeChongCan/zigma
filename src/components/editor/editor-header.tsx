@@ -12,15 +12,22 @@ import {
   Undo2,
 } from 'lucide-react'
 
+import { AuthAccountMenu } from '#/components/auth/auth-account-menu'
+import type { AuthCapabilities } from '#/components/auth/studio-auth-gate'
 import { useEditorStore } from '#/editor/store'
-import type { Collaborator } from '#/editor/types'
+import type { Collaborator, PresenceUser } from '#/editor/types'
 
 interface EditorHeaderProps {
   collaborators: Collaborator[]
-  self: { name: string; color: string }
+  self: PresenceUser
+  capabilities: AuthCapabilities
 }
 
-export function EditorHeader({ collaborators, self }: EditorHeaderProps) {
+export function EditorHeader({
+  collaborators,
+  self,
+  capabilities,
+}: EditorHeaderProps) {
   const [copied, setCopied] = useState(false)
   const title = useEditorStore((state) => state.title)
   const setTitle = useEditorStore((state) => state.setTitle)
@@ -110,13 +117,16 @@ export function EditorHeader({ collaborators, self }: EditorHeaderProps) {
           className="avatar-stack"
           aria-label={`${collaborators.length + 1} collaborators`}
         >
-          <span
-            className="avatar"
-            style={{ background: self.color }}
-            title={`${self.name} (you)`}
-          >
-            {self.name.slice(0, 1)}
-          </span>
+          <AuthAccountMenu
+            identity={{
+              id: self.userId,
+              name: self.name,
+              image: self.image,
+              isAnonymous: self.isAnonymous,
+              color: self.color,
+            }}
+            capabilities={capabilities}
+          />
           {collaborators.slice(0, 3).map((collaborator) => (
             <span
               className="avatar"
@@ -124,7 +134,15 @@ export function EditorHeader({ collaborators, self }: EditorHeaderProps) {
               style={{ background: collaborator.color }}
               title={collaborator.name}
             >
-              {collaborator.name.slice(0, 1)}
+              {collaborator.image ? (
+                <img
+                  src={collaborator.image}
+                  alt=""
+                  referrerPolicy="no-referrer"
+                />
+              ) : (
+                collaborator.name.slice(0, 1).toUpperCase()
+              )}
             </span>
           ))}
           {collaborators.length > 3 && (

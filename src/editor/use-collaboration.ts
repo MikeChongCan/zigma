@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import YProvider from 'y-partyserver/provider'
 import * as Y from 'yjs'
 
@@ -8,13 +8,12 @@ import {
   readDocumentFromYDoc,
   writeDocumentToYDoc,
 } from './collaboration-codec'
+import { getPresenceColor } from '#/auth/identity'
+import type { AuthIdentity } from '#/auth/identity'
 import { useEditorStoreApi } from './store'
-import type { Collaborator, Point } from './types'
+import type { Collaborator, Point, PresenceUser } from './types'
 
-interface AwarenessUser {
-  name: string
-  color: string
-}
+interface AwarenessUser extends PresenceUser {}
 
 interface AwarenessState {
   user?: AwarenessUser
@@ -22,47 +21,25 @@ interface AwarenessState {
   selection?: string[]
 }
 
-const names = ['Mika', 'Noor', 'Sage', 'Inez', 'Ari', 'Lio', 'Mara', 'Theo']
-const colors = [
-  '#ff6b45',
-  '#a9d36e',
-  '#68a7ff',
-  '#f0bf4f',
-  '#d58cff',
-  '#53d6c3',
-]
-
-function getLocalUser(): AwarenessUser {
-  const storageKey = 'canvas-pro-user'
-  const saved = window.localStorage.getItem(storageKey)
-  if (saved) {
-    try {
-      return JSON.parse(saved) as AwarenessUser
-    } catch {
-      window.localStorage.removeItem(storageKey)
-    }
-  }
-  const index = Math.floor(Math.random() * names.length)
-  const user = { name: names[index], color: colors[index % colors.length] }
-  window.localStorage.setItem(storageKey, JSON.stringify(user))
-  return user
-}
-
-export function useCollaboration(documentId: string) {
+export function useCollaboration(documentId: string, identity: AuthIdentity) {
   const store = useEditorStoreApi()
   const providerRef = useRef<YProvider | null>(null)
   const cursorFrameRef = useRef<number | null>(null)
   const pendingCursorRef = useRef<Point | undefined>(undefined)
   const [collaborators, setCollaborators] = useState<Collaborator[]>([])
-  const [self, setSelf] = useState<AwarenessUser>({
-    name: 'You',
-    color: '#ff6b45',
-  })
+  const self = useMemo<AwarenessUser>(
+    () => ({
+      userId: identity.id,
+      name: identity.name,
+      color: getPresenceColor(identity.id),
+      image: identity.image,
+      isAnonymous: identity.isAnonymous,
+    }),
+    [identity.id, identity.image, identity.isAnonymous, identity.name],
+  )
 
   useEffect(() => {
     const doc = new Y.Doc()
-    const user = getLocalUser()
-    setSelf(user)
     store.getState().setConnectionStatus('connecting')
 
     const provider = new YProvider(window.location.host, documentId, doc, {
@@ -70,7 +47,7 @@ export function useCollaboration(documentId: string) {
       protocol: window.location.protocol === 'https:' ? 'wss' : 'ws',
     })
     providerRef.current = provider
-    provider.awareness.setLocalStateField('user', user)
+    provider.awareness.setLocalStateField('user', self)
     provider.awareness.setLocalStateField(
       'selection',
       store.getState().selection,
@@ -88,8 +65,11 @@ export function useCollaboration(documentId: string) {
         if (clientId === doc.clientID || !state.user) continue
         next.push({
           clientId,
+          userId: state.user.userId,
           name: state.user.name,
           color: state.user.color,
+          image: state.user.image,
+          isAnonymous: state.user.isAnonymous,
           cursor: state.cursor,
           selection: state.selection ?? [],
         })
@@ -183,7 +163,7 @@ export function useCollaboration(documentId: string) {
       doc.destroy()
       providerRef.current = null
     }
-  }, [documentId, store])
+  }, [documentId, self, store])
 
   const updateCursor = useCallback((cursor?: Point) => {
     pendingCursorRef.current = cursor

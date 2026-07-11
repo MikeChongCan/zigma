@@ -15,6 +15,13 @@
       },
     ],
   },
+  "d1_databases": [
+    {
+      "binding": "AUTH_DB",
+      "database_name": "canvas-pro-auth",
+      "migrations_dir": "drizzle",
+    },
+  ],
   "migrations": [
     {
       "tag": "v1",

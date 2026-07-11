@@ -7,6 +7,7 @@ dist-ssr
 .nitro
 .tanstack
 .wrangler
+.dev.vars
 .playwright-cli
 output/playwright
 .output
@@ -147,6 +148,7 @@ web_modules/
 .env
 .env.*
 !.env.example
+!.dev.vars.example
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache

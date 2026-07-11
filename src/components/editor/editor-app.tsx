@@ -1,5 +1,8 @@
 import { useEffect } from 'react'
 
+import type { AuthIdentity } from '#/auth/identity'
+import { StudioAuthGate } from '#/components/auth/studio-auth-gate'
+import type { AuthCapabilities } from '#/components/auth/studio-auth-gate'
 import { EditorStoreProvider, useEditorStore } from '#/editor/store'
 import { useCollaboration } from '#/editor/use-collaboration'
 import { useEditorShortcuts } from '#/editor/use-editor-shortcuts'
@@ -11,15 +14,34 @@ import { LayersPanel } from './layers-panel'
 
 export function EditorApp({ documentId }: { documentId: string }) {
   return (
-    <EditorStoreProvider documentId={documentId}>
-      <EditorWorkspace documentId={documentId} />
-    </EditorStoreProvider>
+    <StudioAuthGate>
+      {(identity, capabilities) => (
+        <EditorStoreProvider documentId={documentId}>
+          <EditorWorkspace
+            documentId={documentId}
+            identity={identity}
+            capabilities={capabilities}
+          />
+        </EditorStoreProvider>
+      )}
+    </StudioAuthGate>
   )
 }
 
-function EditorWorkspace({ documentId }: { documentId: string }) {
+function EditorWorkspace({
+  documentId,
+  identity,
+  capabilities,
+}: {
+  documentId: string
+  identity: AuthIdentity
+  capabilities: AuthCapabilities
+}) {
   useEditorShortcuts()
-  const { collaborators, self, updateCursor } = useCollaboration(documentId)
+  const { collaborators, self, updateCursor } = useCollaboration(
+    documentId,
+    identity,
+  )
   const leftPanelOpen = useEditorStore((state) => state.leftPanelOpen)
   const rightPanelOpen = useEditorStore((state) => state.rightPanelOpen)
   const setPanelOpen = useEditorStore((state) => state.setPanelOpen)
@@ -37,7 +59,11 @@ function EditorWorkspace({ documentId }: { documentId: string }) {
       data-left-panel={leftPanelOpen}
       data-right-panel={rightPanelOpen}
     >
-      <EditorHeader collaborators={collaborators} self={self} />
+      <EditorHeader
+        collaborators={collaborators}
+        self={self}
+        capabilities={capabilities}
+      />
       <div className="editor-body">
         {leftPanelOpen && <LayersPanel />}
         <EditorCanvas

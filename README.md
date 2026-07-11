@@ -15,6 +15,9 @@ Offset is an infinite canvas for designing live HTML and React interfaces. It co
 - Yjs collaborative document synchronization
 - Live cursors and selections through Yjs awareness
 - Durable Object snapshots with hibernating PartyServer WebSockets
+- Better Auth guest identities and Google account upgrades
+- Drizzle-managed Cloudflare D1 users, sessions, OAuth accounts, and rate limits
+- Authenticated realtime rooms with named collaborator cursors
 - Responsive product landing page and `/studio/$documentId` rooms
 - Edge-rendered Open Graph images and complete Twitter card metadata
 - Unit tests for geometry, history, hierarchy, and Yjs serialization
@@ -30,12 +33,17 @@ The experimental HTML-in-Canvas API is deliberately not required. It is useful a
 ```bash
 bun install
 bun run cf-typegen
+bun run db:migrate:local
 bun run dev
 ```
 
 Open `http://localhost:3000` for the landing page or `http://localhost:3000/studio/demo` for the editor.
 
 The Cloudflare Vite plugin runs the Worker and Durable Object locally, so opening the same room in two browser windows exercises real collaboration.
+
+Local auth reads `.dev.vars`. Copy `.dev.vars.example` if needed and use a
+development-only Better Auth secret. Google sign-in is optional locally; when
+its credentials are absent, guest username sign-in remains fully functional.
 
 ## Validation
 
@@ -50,6 +58,7 @@ bun run check
 bun run lint
 bun run test
 bun run typecheck
+bun run db:check
 bun run build
 ```
 
@@ -59,13 +68,35 @@ Authenticate once, then deploy:
 
 ```bash
 bunx wrangler login
+bun run db:create
+bun run cf-typegen
+bunx wrangler secret put BETTER_AUTH_SECRET
+bunx wrangler secret put GOOGLE_CLIENT_ID
+bunx wrangler secret put GOOGLE_CLIENT_SECRET
+bun run db:migrate:remote
 bun run deploy
 ```
+
+`db:create` creates `canvas-pro-auth` in the selected Cloudflare account and
+updates the `AUTH_DB` binding with its database ID. Generate the production
+secret with `openssl rand -base64 32`.
+
+In Google Cloud Console, register these authorized redirect URIs:
+
+```text
+http://localhost:3000/api/auth/callback/google
+https://YOUR_DOMAIN/api/auth/callback/google
+```
+
+The current origin is used dynamically, so Workers preview and custom domains
+can each have their own registered redirect URI without changing application
+code.
 
 `wrangler.jsonc` includes:
 
 - the custom TanStack Start Worker entrypoint at `src/server.ts`
 - a `CanvasRoom` Durable Object binding
+- an `AUTH_DB` Cloudflare D1 binding
 - a SQLite-backed Durable Object migration
 - Worker observability
 
@@ -88,8 +119,18 @@ Each URL room (`/studio/:documentId`) maps to one `CanvasRoom` Durable Object. T
 
 The server periodically persists a compact Yjs state update into Durable Object storage and restores it after eviction. Awareness state carries cursors and selections but is intentionally ephemeral.
 
+Better Auth stores user, session, provider account, verification, and rate-limit
+records in D1. Anonymous users choose a display name before entering. Their
+authenticated identity is broadcast through Yjs awareness, producing stable
+avatar colors and named cursors. Signing in with Google upgrades the anonymous
+session; OAuth tokens are encrypted before D1 storage.
+
 ## Production notes
 
-The current room model is intentionally link-accessible and enforces same-origin WebSocket connections. Before using it for private customer documents, add authentication and room authorization in `routePartykitRequest(..., { onBeforeConnect })`, then validate the same identity on HTTP document operations. Do not treat unguessable room IDs as authorization.
+The current room model is intentionally link-accessible to signed-in users.
+WebSocket upgrades require a valid Better Auth session and a same-origin
+request, but anyone who is authenticated and has the room link can collaborate.
+Before using private customer documents, add explicit owner/member permissions;
+do not treat unguessable room IDs as authorization.
 
 For larger scenes, the next performance step is viewport culling of offscreen DOM nodes. The current renderer keeps the implementation clear and fully interactive for the included product-scale document.
