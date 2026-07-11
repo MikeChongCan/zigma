@@ -2,7 +2,7 @@ import * as Y from 'yjs'
 
 import type { CanvasDocument, CanvasNode, CanvasStyle } from './types'
 
-export const LOCAL_YJS_ORIGIN = Symbol('canvas-pro-local-change')
+export const LOCAL_YJS_ORIGIN = Symbol('zigma-local-change')
 
 const nodeFields = [
   'id',

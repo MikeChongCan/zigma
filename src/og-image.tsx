@@ -54,7 +54,7 @@ export async function renderOgImage(request: Request): Promise<Response> {
       headers: {
         'Cache-Control':
           'public, max-age=3600, s-maxage=604800, stale-while-revalidate=86400',
-        'Content-Disposition': 'inline; filename="offset-og.png"',
+        'Content-Disposition': 'inline; filename="zigma-og.png"',
         'X-Content-Type-Options': 'nosniff',
       },
     },
@@ -71,7 +71,7 @@ export async function renderOgImage(request: Request): Promise<Response> {
   return response
 }
 
-function OffsetMark() {
+function ZigmaMark() {
   return (
     <div
       style={{
@@ -104,7 +104,7 @@ function OffsetMark() {
           }}
         />
       </div>
-      OFFSET
+      ZIGMA
     </div>
   )
 }
@@ -242,7 +242,7 @@ function EditorPreview({ variant }: { variant: OgVariant }) {
                 letterSpacing: '0.13em',
               }}
             >
-              <div style={{ display: 'flex' }}>OFFSET</div>
+              <div style={{ display: 'flex' }}>ZIGMA</div>
               <div style={{ display: 'flex', color: '#f0643f' }}>LIVE</div>
             </div>
             <div
@@ -379,7 +379,7 @@ function OgCard({ variant }: { variant: OgVariant }) {
           justifyContent: 'space-between',
         }}
       >
-        <OffsetMark />
+        <ZigmaMark />
         <div
           style={{
             display: 'flex',
@@ -492,7 +492,7 @@ function OgCard({ variant }: { variant: OgVariant }) {
         }}
       >
         <div style={{ display: 'flex' }}>HTML + REACT + EDGE STATE</div>
-        <div style={{ display: 'flex' }}>1200 × 630 / OFFSET</div>
+        <div style={{ display: 'flex' }}>1200 × 630 / ZIGMA</div>
       </div>
     </div>
   )

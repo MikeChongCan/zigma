@@ -1,11 +1,11 @@
 import { createServerFn } from '@tanstack/react-start'
 import { getRequest } from '@tanstack/react-start/server'
 
-export const SITE_NAME = 'Offset'
-export const HOME_TITLE = 'Offset — Infinite canvas for React interfaces'
+export const SITE_NAME = 'Zigma'
+export const HOME_TITLE = 'Zigma — Infinite canvas for React interfaces'
 export const HOME_DESCRIPTION =
   'Design live React and HTML interfaces on an infinite multiplayer canvas with layers, inspection, and edge persistence.'
-export const STUDIO_TITLE = 'Studio — Offset'
+export const STUDIO_TITLE = 'Studio — Zigma'
 export const STUDIO_DESCRIPTION =
   'A collaborative infinite canvas for live React and HTML designs.'
 
@@ -40,8 +40,8 @@ export function createSocialHead({
   imageUrl.searchParams.set('variant', imageVariant)
   const imageAlt =
     imageVariant === 'studio'
-      ? 'Offset collaborative canvas workspace preview'
-      : 'Offset infinite canvas product preview'
+      ? 'Zigma collaborative canvas workspace preview'
+      : 'Zigma infinite canvas product preview'
 
   return {
     meta: [

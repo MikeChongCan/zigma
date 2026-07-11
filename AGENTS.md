@@ -1,4 +1,4 @@
-# Offset project guidance
+# Zigma project guidance
 
 - Use `bun` for package and script commands.
 - Run `bun run validate` after implementation changes.

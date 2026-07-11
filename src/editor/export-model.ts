@@ -65,7 +65,7 @@ export function sanitizeExportName(value: string): string {
     .replace(/[^a-zA-Z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .toLowerCase()
-  return normalized || 'offset-export'
+  return normalized || 'zigma-export'
 }
 
 export function getExportFilename(
@@ -76,5 +76,5 @@ export function getExportFilename(
   const parts = [documentTitle, frameName]
     .filter((value): value is string => Boolean(value))
     .map(sanitizeExportName)
-  return `${parts.join('-') || 'offset-export'}.${extension}`
+  return `${parts.join('-') || 'zigma-export'}.${extension}`
 }

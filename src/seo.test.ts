@@ -10,11 +10,11 @@ describe('social metadata', () => {
         imageVariant: 'home',
         origin: undefined,
         path: '/',
-        title: 'Offset',
+        title: 'Zigma',
       }),
     ).toEqual({
       meta: [
-        { title: 'Offset' },
+        { title: 'Zigma' },
         { name: 'description', content: 'Design together.' },
       ],
       links: [],
@@ -25,18 +25,18 @@ describe('social metadata', () => {
     const head = createSocialHead({
       description: 'Design together.',
       imageVariant: 'home',
-      origin: 'https://offset.example',
+      origin: 'https://zigma.example',
       path: '/',
-      title: 'Offset',
+      title: 'Zigma',
     })
 
     expect(head.links).toContainEqual({
       rel: 'canonical',
-      href: 'https://offset.example/',
+      href: 'https://zigma.example/',
     })
     expect(head.meta).toContainEqual({
       property: 'og:image',
-      content: 'https://offset.example/api/og?variant=home',
+      content: 'https://zigma.example/api/og?variant=home',
     })
     expect(head.meta).toContainEqual({
       name: 'twitter:card',
@@ -52,18 +52,18 @@ describe('social metadata', () => {
     const head = createSocialHead({
       description: 'A shared room.',
       imageVariant: 'studio',
-      origin: 'https://offset.example',
+      origin: 'https://zigma.example',
       path: '/studio/team%20room',
-      title: 'Studio — Offset',
+      title: 'Studio — Zigma',
     })
 
     expect(head.meta).toContainEqual({
       property: 'og:url',
-      content: 'https://offset.example/studio/team%20room',
+      content: 'https://zigma.example/studio/team%20room',
     })
     expect(head.meta).toContainEqual({
       name: 'twitter:image',
-      content: 'https://offset.example/api/og?variant=studio',
+      content: 'https://zigma.example/api/og?variant=studio',
     })
   })
 })

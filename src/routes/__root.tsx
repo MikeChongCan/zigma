@@ -15,7 +15,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Offset — Infinite canvas for React interfaces',
+        title: 'Zigma — Infinite canvas for React interfaces',
       },
       {
         name: 'theme-color',
@@ -31,6 +31,10 @@ export const Route = createRootRoute({
         rel: 'icon',
         href: '/favicon.svg',
         type: 'image/svg+xml',
+      },
+      {
+        rel: 'manifest',
+        href: '/manifest.json',
       },
     ],
   }),

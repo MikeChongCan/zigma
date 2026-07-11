@@ -10,7 +10,7 @@ import {
   UsersRound,
 } from 'lucide-react'
 
-function OffsetMark() {
+function ZigmaMark() {
   return (
     <span className="landing-logo-mark" aria-hidden="true">
       <i />
@@ -22,11 +22,11 @@ function OffsetMark() {
 
 function ProductPreview() {
   return (
-    <div className="product-preview" aria-label="Offset editor preview">
+    <div className="product-preview" aria-label="Zigma editor preview">
       <div className="preview-topbar">
         <div className="preview-brand">
-          <OffsetMark />
-          <span>OFFSET</span>
+          <ZigmaMark />
+          <span>ZIGMA</span>
         </div>
         <span className="preview-document">Northwind launch</span>
         <div className="preview-people">
@@ -175,8 +175,8 @@ export function LandingPage() {
     <div className="landing-page" id="top">
       <header className="landing-nav">
         <Link to="/" className="landing-brand">
-          <OffsetMark />
-          <span>OFFSET</span>
+          <ZigmaMark />
+          <span>ZIGMA</span>
         </Link>
         <nav aria-label="Main navigation">
           <a href="#system">System</a>
@@ -350,9 +350,9 @@ export function LandingPage() {
 
         <section className="final-cta-section">
           <div className="final-cta-mark">
-            <OffsetMark />
+            <ZigmaMark />
           </div>
-          <p>OFFSET / OPEN CANVAS</p>
+          <p>ZIGMA / OPEN CANVAS</p>
           <h2>
             Make the page.
             <br />
@@ -370,7 +370,7 @@ export function LandingPage() {
       </main>
 
       <footer className="landing-footer">
-        <span>OFFSET © 2026</span>
+        <span>ZIGMA © 2026</span>
         <span>React / TanStack / Cloudflare</span>
         <a href="#top">Back to top ↑</a>
       </footer>

@@ -71,7 +71,7 @@ export function StudioAuthGate({ children }: StudioAuthGateProps) {
 
 function AuthLoading() {
   return (
-    <main className="auth-shell" aria-label="Loading your Offset session">
+    <main className="auth-shell" aria-label="Loading your Zigma session">
       <div className="auth-loading-mark">
         <span className="logo-glyph">
           <i />
@@ -135,7 +135,7 @@ function AuthWelcome({ capabilities }: { capabilities: AuthCapabilities }) {
             <i />
             <i />
           </span>
-          <strong>OFFSET</strong>
+          <strong>ZIGMA</strong>
         </div>
         <div className="auth-coordinate">ROOM ACCESS / 01</div>
         <h1>

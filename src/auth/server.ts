@@ -30,7 +30,7 @@ export function createAuth(env: AuthEnv, request: Request) {
   const db = drizzle(env.AUTH_DB, { schema: authSchema })
 
   return betterAuth({
-    appName: 'Offset',
+    appName: 'Zigma',
     baseURL: origin,
     secret,
     database: drizzleAdapter(db, {
@@ -77,7 +77,7 @@ export function createAuth(env: AuthEnv, request: Request) {
     },
     plugins: [
       anonymous({
-        emailDomainName: 'anonymous.offset.local',
+        emailDomainName: 'anonymous.zigma.local',
         generateName: (context) => {
           const name = readDisplayNameHeader(context.headers)
           if (!name) {
@@ -88,7 +88,7 @@ export function createAuth(env: AuthEnv, request: Request) {
           return name
         },
         onLinkAccount: ({ anonymousUser, newUser }) => {
-          console.info('Offset anonymous account upgraded', {
+          console.info('Zigma anonymous account upgraded', {
             anonymousUserId: anonymousUser.user.id,
             newUserId: newUser.user.id,
           })

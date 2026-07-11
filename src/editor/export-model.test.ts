@@ -49,5 +49,6 @@ describe('export model', () => {
     expect(getExportFilename('Northwind Launch', 'Mobile / 01', 'png')).toBe(
       'northwind-launch-mobile-01.png',
     )
+    expect(getExportFilename('', '', 'svg')).toBe('zigma-export.svg')
   })
 })

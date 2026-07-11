@@ -13,7 +13,7 @@ export default {
     if (url.pathname === '/api/health') {
       return Response.json({
         ok: true,
-        service: 'canvas-pro',
+        service: 'zigma',
         collaboration: 'durable-object',
       })
     }

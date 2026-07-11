@@ -116,7 +116,10 @@ bun run build
 Authenticate once, then deploy:
 
 ```bash
+export CLOUDFLARE_ACCOUNT_ID=your_account_id
 bunx wrangler login
+# First deployment only; skip when AUTH_DB is already configured:
+bun run db:create
 bun run cf-typegen
 bun run db:migrate:remote
 bunx wrangler secret put BETTER_AUTH_SECRET
@@ -125,11 +128,10 @@ bunx wrangler secret put GOOGLE_CLIENT_SECRET
 bun run deploy
 ```
 
-Production is pinned to Cloudflare account
-`493236c60f135c72e3753239bbcf8839`. The existing `canvas-pro-auth` D1 database
-is bound as `AUTH_DB`, so normal deploys should apply pending migrations rather
-than create another database. Use `bun run db:create` only when deliberately
-replacing that binding. Generate the production Better Auth secret with
+Keep `CLOUDFLARE_ACCOUNT_ID` in your shell or CI environment rather than the
+tracked OSS configuration. `db:create` creates `canvas-pro-auth` in that account
+and updates the `AUTH_DB` binding; subsequent deploys should only apply pending
+migrations. Generate the production Better Auth secret with
 `openssl rand -base64 32`.
 
 In Google Cloud Console, register these authorized redirect URIs:
@@ -146,7 +148,7 @@ code.
 `wrangler.jsonc` includes:
 
 - the custom TanStack Start Worker entrypoint at `src/server.ts`
-- the production Cloudflare account and `zigma-canvas-pro` Worker name
+- the `zigma-canvas-pro` Worker name
 - a `CanvasRoom` Durable Object binding
 - an `AUTH_DB` Cloudflare D1 binding
 - a SQLite-backed Durable Object migration

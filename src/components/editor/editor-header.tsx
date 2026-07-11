@@ -61,13 +61,13 @@ export function EditorHeader({
   return (
     <header className="editor-header">
       <div className="editor-brand-zone">
-        <Link to="/" className="editor-logo" aria-label="Offset home">
+        <Link to="/" className="editor-logo" aria-label="Zigma home">
           <span className="logo-glyph">
             <i />
             <i />
             <i />
           </span>
-          <strong>OFFSET</strong>
+          <strong>ZIGMA</strong>
         </Link>
         <span className="header-divider" />
         <button

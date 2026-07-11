@@ -1,4 +1,4 @@
-export const DISPLAY_NAME_HEADER = 'x-offset-display-name'
+export const DISPLAY_NAME_HEADER = 'x-zigma-display-name'
 export const DISPLAY_NAME_MAX_LENGTH = 32
 
 export type AuthIdentity = {

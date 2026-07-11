@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "canvas-pro",
+      "name": "zigma",
       "dependencies": {
         "@better-auth/drizzle-adapter": "^1.6.23",
         "@cloudflare/vite-plugin": "^1.26.0",
